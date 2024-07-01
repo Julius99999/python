@@ -1,45 +1,60 @@
-t=('python','hello','world')
-print(t[0])
-t2=t[0:3:2]
-print(t2)
+# d={1001:'李梅',1002:'王华',1003:'张锋'}
+# print(d)
+# # 向字典中中添加元素
+# d[1002]='张丽丽'
+# print(d)
 
+# # 获取字典中所有的key
+# keys=d.keys()
+# print(keys)
+# print(list(keys))
+# print(tuple(keys))
+#
+# # 获取字典中所有的value
+# values=d.values()
+# print(values)
+# print(list(values))
+# print(tuple(values))
 
-for item in t:
-    print(item)
+# 如果将字典中的数据转成key-value的形式，以元组的方式进行展现
+# lst=list(d.items())
+# print(lst)
+#
+# d=dict(lst)
+# print(d)
+#
+# # 使用pop函数
+# print(d.pop(1001))
+# print(d)
+#
+# print(d.pop(1008,'不存在'))
+# # 随机删除
+# print(d.popitem())
+# print(d)
+#
+# # 清空字典中所有的元素
+# d.clear()
+# print(d)
+# # Python中一切皆对象，每一个对象都有一个布尔值
+# print(bool(d))#空字典的布尔值为False
+#
+# import random
+# d={item:random.randint(1,100) for item in range(4)}
+# print(d)
+#
+# # 创建两个表
+# lst=[1001,1002,1003]
+# lst2=['陈梅梅','王一一','王丽丽']
+# d={key:value for (key,value) in zip(lst,lst2)}
+# print(d)
 
+def get_sum(num):
+    s=0
+    for i in range(1,num+1):
+        s+=i
+    print(f'1到{num}之间的累加和为{s}')
 
-for i in range(len(t)):
-    print(t[i])
-
-
-
-
-
-
-
-
-
-
-
-
-d={10:'cat',30:'dog',20:'zoo'}
-print(d)
-
-
-lst1=[10,20,30,40]
-lst2={'cat':'dog','zoo':'cat'}
-zipobj=zip(lst1,lst2)
-print(zipobj)
-
-d=dict(zipobj)
-print(d)
-
-d=dict(cat=10,dog=20)
-print(d)
-
-t=(10,20,30)
-print({t:10})
-
-print('max:',max(d))
-print('min:',min(d))
-print('len:',len(d))
+# 函数的调用
+get_sum(10)
+get_sum(100)
+get_sum(1000)
